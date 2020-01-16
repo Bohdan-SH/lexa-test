@@ -1,0 +1,16 @@
+@mixin section-color($color, $hover-color) {
+  background-color: $color;
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+
+@mixin name-color($color, $hover-color, $click-color) {
+  background-color: $color;
+  &:hover {
+    background-color: $hover-color;
+  }
+  &:active {
+    background-color: $click-color;
+  }
+}

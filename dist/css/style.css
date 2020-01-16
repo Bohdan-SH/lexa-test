@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.green {
+  background-color: #00962a;
+}
+
+.green:hover {
+  background-color: #0ba136;
+}
+
+.green:active {
+  background-color: #02a831;
+}
+
+.red {
+  background-color: #9c1006;
+}
+
+.red:hover {
+  background-color: #be1105;
+}
+
+.red:active {
+  background-color: #ad140a;
+}
+
+.grey {
+  background-color: #909294;
+}
+
+.grey:hover {
+  background-color: #adb0b3;
+}
+
+.grey:active {
+  background-color: #9d9fa1;
+}
+
+.header__list {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  list-style: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #bdc3c7;
+}
+
+.header__text {
+  padding: 10px;
+  color: #fff;
+}
+
+.main {
+  padding-top: 30px;
+}
+
+.main__section {
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 30px 20px;
+}
+
+.main__section:nth-child(1) {
+  background-color: #00cc3a;
+}
+
+.main__section:nth-child(1):hover {
+  background-color: #0cdf48;
+}
+
+.main__section:nth-child(2) {
+  background-color: #d91e18;
+}
+
+.main__section:nth-child(2):hover {
+  background-color: #eb2d26;
+}
+
+.main__section:nth-child(3) {
+  background-color: #bdc3c7;
+}
+
+.main__section:nth-child(3):hover {
+  background-color: #cdd3d6;
+}
+
+.main__wrapper {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.main__caption, .main__count, .main__class-name {
+  color: #fff;
+}
+
+.main__count {
+  padding-top: 5px;
+}
+
+.main__class {
+  opacity: 0;
+  position: absolute;
+}
+
+.main .active {
+  opacity: 1;
+  position: static;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.main__class-names {
+  position: relative;
+  padding-top: 10px;
+  list-style: none;
+}
+
+.main__class-name {
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.main__class-block {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.main__method {
+  position: absolute;
+  opacity: 0;
+  list-style: none;
+}
+
+.main__method-item {
+  padding: 5px 20px;
+}

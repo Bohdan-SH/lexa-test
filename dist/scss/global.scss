@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.green {
+  @include name-color($green-dark, $green-light, $green-active);
+}
+
+.red {
+  @include name-color($red-dark, $red-light, $red-active);
+}
+
+.grey {
+  @include name-color($grey-dark, $grey-light, $grey-active);
+}

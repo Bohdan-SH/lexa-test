@@ -1,0 +1,16 @@
+.header {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: $grey-primary;
+  }
+
+  &__text {
+    padding: 10px;
+    color: $white;
+  }
+}
