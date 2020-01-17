@@ -5,12 +5,9 @@
   }
 }
 
-@mixin name-color($color, $hover-color, $click-color) {
+@mixin name-color($color, $hover-color) {
   background-color: $color;
   &:hover {
     background-color: $hover-color;
-  }
-  &:active {
-    background-color: $click-color;
   }
 }

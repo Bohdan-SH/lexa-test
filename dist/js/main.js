@@ -1,9 +1,5 @@
 import Result from './Result.js';
 
-const result = new Result({
-  element: document.querySelector('#root')
-});
-
 function renderChart(passed, failed, skipped) {
   let ctx = document.getElementById('myChart').getContext('2d');
   let chart = new Chart(ctx, {
@@ -37,6 +33,10 @@ fetch('../result.json')
   .then(response => response.json())
   .then(json => json)
   .then(values => {
+    new Result({
+      element: document.querySelector('#root'),
+      data: values
+    });
     renderChart(
       values['testing-results']['@passed'],
       values['testing-results']['@failed'],

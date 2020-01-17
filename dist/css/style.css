@@ -21,10 +21,6 @@ body {
   background-color: #0ba136;
 }
 
-.green:active {
-  background-color: #02a831;
-}
-
 .red {
   background-color: #9c1006;
 }
@@ -33,20 +29,12 @@ body {
   background-color: #be1105;
 }
 
-.red:active {
-  background-color: #ad140a;
-}
-
 .grey {
   background-color: #909294;
 }
 
 .grey:hover {
   background-color: #adb0b3;
-}
-
-.grey:active {
-  background-color: #9d9fa1;
 }
 
 .header__list {

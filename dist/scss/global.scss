@@ -14,13 +14,13 @@ body {
 }
 
 .green {
-  @include name-color($green-dark, $green-light, $green-active);
+  @include name-color($green-dark, $green-light);
 }
 
 .red {
-  @include name-color($red-dark, $red-light, $red-active);
+  @include name-color($red-dark, $red-light);
 }
 
 .grey {
-  @include name-color($grey-dark, $grey-light, $grey-active);
+  @include name-color($grey-dark, $grey-light);
 }

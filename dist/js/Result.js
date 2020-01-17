@@ -4,9 +4,11 @@ import Fail from './Fail.js';
 import Skipp from './Skipp.js';
 
 export default class Result {
-  constructor({ element }) {
+  constructor({ element, data }) {
     this.element = element;
+    this.data = data;
     this.render();
+    this.filterObjects();
     this.initHeader();
     this.initSuccess();
     this.initFail();
@@ -16,27 +18,61 @@ export default class Result {
 
   initHeader = () => {
     const header = new Header({
-      element: document.querySelector('#header')
+      element: document.querySelector('#header'),
+      data: this.data
     });
   };
 
   initSuccess = () => {
     const succes = new Success({
-      element: document.querySelector('#success')
+      element: document.querySelector('#success'),
+      data: this.data,
+      methods: this.filterObjects()
     });
   };
 
   initFail = () => {
     const fail = new Fail({
-      element: document.querySelector('#failed')
+      element: document.querySelector('#failed'),
+      data: this.data
     });
   };
 
   initSkip = () => {
     const skip = new Skipp({
-      element: document.querySelector('#skipped')
+      element: document.querySelector('#skipped'),
+      data: this.data
     });
   };
+
+  filterObjects() {
+    let firstArr = this.data['testing-results']['suite']['test'][0][
+      'class'
+    ].map(obj => obj['test-method']);
+    let secondArr = this.data['testing-results']['suite']['test'][1][
+      'class'
+    ].map(obj => obj['test-method']);
+
+    let testMethods = [...firstArr, ...secondArr].reduce(
+      (acc, arr) => [...acc, ...arr],
+      []
+    );
+
+    // let passedMethods = testMethods.filter(
+    //   method => method['@status'] === 'PASS'
+    // );
+    // let failedMethods = testMethods.filter(
+    //   method => method['@status'] === 'FAIL'
+    // );
+    // let skippedMethods = testMethods.filter(
+    //   method => method['@status'] === 'SKIP'
+    // );
+
+    // console.log(passedMethods);
+    // console.log(failedMethods);
+    // console.log(skippedMethods);
+    return testMethods;
+  }
 
   openSection = () => {
     let allSections = [...document.querySelectorAll('section')];
